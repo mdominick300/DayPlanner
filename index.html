@@ -12,8 +12,65 @@
 </head>
 
 <body>
- 
-    <script src="./questions.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+
+            <div class="col-md-8">
+                <div class="top">
+                    <H1>Daily Planner</H1>
+                    <h5 class="realTime"></h5>
+                    <br>
+                    Date
+                </div>
+                <table class="table">
+                    <!-- <thead>
+                        <tr>
+                            <th scope="col">Daily Planner</th>
+                        </tr>
+                    </thead> -->
+                    <tbody>
+                        <tr>
+                            <td id="time-9" class="time" value="9:00:00">9 A.M.</td>
+                            <td id="input-1" class="input">Input</td>
+                            <td id="button" class="submitbutton">Save</td>
+                        </tr>
+                        <tr>
+                            <td id="time-10" class="time" value="10:00:00">10 A.M.</td>
+                            <td id="input-10" class="input">Input</td>
+                            <td id="button" class="submitbutton">Save</td>
+                        </tr>
+                        <tr>
+                            <td id="time-11" class="time" value="11:00:00">11 A.M.</td>
+                            <td id="input-11" class="input">Input</td>
+                            <td id="button" class="submitbutton">Save</td>
+                        </tr>
+                        <tr>
+                            <td id="time-12" class="time" value="12:00:00">12 P.M.</td>
+                            <td id="input-12" class="input">Input</td>
+                            <td id="button" class="submitbutton">Save</td>
+                        </tr>
+                        <tr>
+                            <td id="time-1" class="time" value="1:00:00">1 P.M.</td>
+                            <td id="input-1" class="input">Input</td>
+                            <td id="button" class="submitbutton">Save</td>
+                        </tr>
+                        <tr>
+                            <td id="time-2" class="time" value="2:00:00">2 P.M.</td>
+                            <td id="input-2" class="input">Input</td>
+                            <td id="button" class="submitbutton">Save</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -23,7 +80,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="./moment.js"></script>
+    <script>
+        var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+        $(".realTime").text(currentTime);
     
+        var update = function () {
+            $(".realTime").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+        }
+        setInterval(update, 1000);
+
+
+    </script>
+
 </body>
 
 </html>

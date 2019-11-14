@@ -1,0 +1,15 @@
+.top{
+    height: 100px;
+    color:red;
+    text-align: center;
+    margin: 50px;
+}
+.input{
+    background: rgb(202, 202, 202);
+    width:80%;
+}
+.submitbutton{
+    background:lightskyblue;
+    color:white;
+    text-align: center;
+}
