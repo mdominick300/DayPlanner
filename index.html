@@ -12,18 +12,64 @@
 </head>
 
 <body>
+    <header class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+
     <div class="container">
         <div class="row">
             <div class="col-md-2">
             </div>
 
             <div class="col-md-8">
-                <div class="top">
-                    <H1>Daily Planner</H1>
-                    <h5 class="realTime"></h5>
-                    <br>
-                    Date
+                <div class="row">
+                    <div class="hour col-md-2">9 A.M.</div>
+                    <textarea class="past col-md-8" id="save9" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
                 </div>
+                <div class="row">
+                    <div class="hour col-md-2">10 A.M.</div>
+                    <textarea class="past col-md-8" id="save10" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">11 A.M.</div>
+                    <textarea class="past col-md-8" id="save11" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">12 P.M.</div>
+                    <textarea class="past col-md-8" id="save12" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">1 P.M.</div>
+                    <textarea class="past col-md-8" id="save1" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">2 P.M.</div>
+                    <textarea class="past col-md-8" id="save2" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">3 P.M.</div>
+                    <textarea class="past col-md-8" id="save3" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">4 P.M.</div>
+                    <textarea class="past col-md-8" id="save4" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+                <div class="row">
+                    <div class="hour col-md-2">5 P.M.</div>
+                    <textarea class="past col-md-8" id="save5" placeholder="Enter"></textarea>
+                    <button class="saveBtn col-md-2">Save</button>
+                </div>
+
                 <table class="table">
                     <!-- <thead>
                         <tr>
@@ -31,38 +77,63 @@
                         </tr>
                     </thead> -->
                     <tbody>
-                        <tr>
-                            <td id="time-9" class="time" value="9:00:00">9 A.M.</td>
-                            <td id="input-1" class="input">Input</td>
-                            <td id="button" class="submitbutton">Save</td>
-                        </tr>
-                        <tr>
+                        <!-- <tr>
+                            <td id="time-9" class="" value="9:00:00">9 A.M.</td>
+                            <textarea class="past" id="save9"
+                                    class="input no-outline" type="text" placeholder="Enter"></textarea>
+
+                            <td id="button" class="submitbutton"><button>Save</button></td>
+                        </tr> -->
+                        <!-- <tr>
                             <td id="time-10" class="time" value="10:00:00">10 A.M.</td>
-                            <td id="input-10" class="input">Input</td>
-                            <td id="button" class="submitbutton">Save</td>
-                        </tr>
+                            <textarea class="past" id="save10" placeholder="Enter"></textarea>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
+                        </tr> -->
                         <tr>
                             <td id="time-11" class="time" value="11:00:00">11 A.M.</td>
-                            <td id="input-11" class="input">Input</td>
-                            <td id="button" class="submitbutton">Save</td>
+                            <td id="input-11" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
                         </tr>
                         <tr>
                             <td id="time-12" class="time" value="12:00:00">12 P.M.</td>
-                            <td id="input-12" class="input">Input</td>
-                            <td id="button" class="submitbutton">Save</td>
+                            <td id="input-12" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
                         </tr>
                         <tr>
                             <td id="time-1" class="time" value="1:00:00">1 P.M.</td>
-                            <td id="input-1" class="input">Input</td>
-                            <td id="button" class="submitbutton">Save</td>
+                            <td id="input-1" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
                         </tr>
                         <tr>
                             <td id="time-2" class="time" value="2:00:00">2 P.M.</td>
-                            <td id="input-2" class="input">Input</td>
-                            <td id="button" class="submitbutton">Save</td>
+                            <td id="input-2" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
+                        </tr>
+                        <tr>
+                            <td id="time-3" class="time" value="3:00:00">3 P.M.</td>
+                            <td id="input-3" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
+                        </tr>
+                        <tr>
+                            <td id="time-4" class="time" value="4:00:00">4 P.M.</td>
+                            <td id="input-4" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
+                        </tr>
+                        <tr>
+                            <td id="time-5" class="time" value="5:00:00">5 P.M.</td>
+                            <td id="input-5" class="past"><input id="save" style="height:100%" class="input no-outline"
+                                    type="text" placeholder="Enter"></input></td>
+                            <td id="button" class="submitbutton"><button>Save</button></td>
                         </tr>
                     </tbody>
                 </table>
+                <div><textarea> Hello</textarea></div>
             </div>
             <div class="col-md-2">
             </div>
@@ -70,26 +141,76 @@
     </div>
 
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="./moment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
     <script>
         var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
-        $(".realTime").text(currentTime);
-    
+        $("#currentDay").text(currentTime);
+
         var update = function () {
-            $(".realTime").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+            $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
         }
         setInterval(update, 1000);
 
+        // function save(){
+        //     var saved = document.querySelector("#save")
+        //     var saver = save.value.trim();
+
+        //     console.log(saver);
+        //     localStorage.setItem('saver', JSON.stringify(saver));
+
+        // }
+        var input9 = document.querySelector("#save9");
+        var saved =
+            // function renderSaved() {
+
+            // }
+            init();
+        function init() {
+            // Get stored todos from localStorage
+            // Parsing the JSON string to an object
+            var storedSaved = JSON.parse(localStorage.getItem("saved"));
+
+            // If todos were retrieved from localStorage, update the todos array to it
+            if (storedSaved !== null) {
+                saved = storedSaved;
+            }
+
+            // Render todos to the DOM
+            renderSaved();
+        }
+
+        function savePlans() {
+            localStorage.setItem('saved', JSON.stringify(saved));
+        }
+        function renderSaved() {
+            input9.innerHTML = "";
+            input9.textContent = saved;
+
+        }
+
+        function clickSave(event) {
+            event.preventDefault();
+            var savedText = input9.value
+            console.log(savedText);
+            if (savedText === "") {
+                return;
+            }
+            // saved.push(savedText);
+            saved = savedText;
+            // renderSaved();
+            savePlans();
+            renderSaved();
+
+        }
+        $('button').click(clickSave);
 
     </script>
 
