@@ -25,47 +25,47 @@
 
             <div class="col-md-8">
                 <div class="row">
-                    <div class="hour col-md-2">9 A.M.</div>
-                    <textarea class="past col-md-8" id="save9" placeholder="Enter"></textarea>
+                    <div class=" hour col-md-2">9AM</div>
+                    <textarea class="past description col-md-8" id="save9" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">10 A.M.</div>
-                    <textarea class="past col-md-8" id="save10" placeholder="Enter"></textarea>
+                    <div class="hour col-md-2">10AM</div>
+                    <textarea class="past description col-md-8" id="save10" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">11 A.M.</div>
-                    <textarea class="past col-md-8" id="save11" placeholder="Enter"></textarea>
+                    <div class="hour col-md-2">11AM</div>
+                    <textarea class="past description col-md-8" id="save11" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">12 P.M.</div>
-                    <textarea class="past col-md-8" id="save12" placeholder="Enter"></textarea>
+                    <div class="hour col-md-2">12PM</div>
+                    <textarea class="past description col-md-8" id="save12" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">1 P.M.</div>
+                    <div class="hour col-md-2">1PM</div>
                     <textarea class="past col-md-8" id="save1" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">2 P.M.</div>
+                    <div class="hour col-md-2">2PM</div>
                     <textarea class="past col-md-8" id="save2" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">3 P.M.</div>
+                    <div class="hour col-md-2">3PM</div>
                     <textarea class="past col-md-8" id="save3" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">4 P.M.</div>
+                    <div class="hour col-md-2">4PM</div>
                     <textarea class="past col-md-8" id="save4" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
                 <div class="row">
-                    <div class="hour col-md-2">5 P.M.</div>
+                    <div class="hour col-md-2">5PM</div>
                     <textarea class="past col-md-8" id="save5" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2">Save</button>
                 </div>
@@ -133,7 +133,6 @@
                         </tr>
                     </tbody>
                 </table>
-                <div><textarea> Hello</textarea></div>
             </div>
             <div class="col-md-2">
             </div>
@@ -158,6 +157,9 @@
             $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
         }
         setInterval(update, 1000);
+        
+        var timer = moment().format('h a');
+        console.log(timer);
 
         // function save(){
         //     var saved = document.querySelector("#save")
@@ -168,10 +170,9 @@
 
         // }
         var input9 = document.querySelector("#save9");
-        var saved =
-            // function renderSaved() {
-
-            // }
+        var input
+        var saved9 =
+         
             init();
         function init() {
             // Get stored todos from localStorage
@@ -180,7 +181,7 @@
 
             // If todos were retrieved from localStorage, update the todos array to it
             if (storedSaved !== null) {
-                saved = storedSaved;
+                saved9 = storedSaved;
             }
 
             // Render todos to the DOM
@@ -188,11 +189,11 @@
         }
 
         function savePlans() {
-            localStorage.setItem('saved', JSON.stringify(saved));
+            localStorage.setItem('saved', JSON.stringify(saved9));
         }
         function renderSaved() {
             input9.innerHTML = "";
-            input9.textContent = saved;
+            input9.textContent = saved9;
 
         }
 
@@ -204,11 +205,19 @@
                 return;
             }
             // saved.push(savedText);
-            saved = savedText;
+            saved9 = savedText;
             // renderSaved();
             savePlans();
             renderSaved();
 
+        }
+        
+
+        function changer(){
+
+            if ( timer > hour.value ){
+
+        }
         }
         $('button').click(clickSave);
 
