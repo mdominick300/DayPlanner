@@ -8,22 +8,11 @@
     color:white;
     text-align: center;
 }
-table{
-    height: 100px;
-}
 button{
     background:rgb(147, 239, 255);
     color:white;
     text-align: center;
-    /* height: 60px; */
 }
-input {
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: hidden;
-    background-color: #eee;
-    }
 .no-outline:focus {
         outline: none;
         }
@@ -69,8 +58,6 @@ body {
     height: 80px;
     border-top: 1px solid white;
     margin-bottom: -32px;
-   
-    
   }
   
   .hour {

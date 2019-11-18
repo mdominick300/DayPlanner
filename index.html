@@ -26,47 +26,47 @@
             <div class="col-md-8" id="">
                 <div class="row" id="plannerTime">
                     <div class="hour col-md-2" value=9>9 A.M.</div>
-                    <textarea class="col-md-8 text" id="save9" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8  past text" id="save9" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=10>10 A.M.</div>
-                    <textarea class="col-md-8 text" id="save10" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save10" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=11>11 A.M.</div>
-                    <textarea class="col-md-8 text" id="save11" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save11" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=12>12 P.M.</div>
-                    <textarea class="col-md-8 text" id="save12" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save12" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=13>1 P.M.</div>
-                    <textarea class="col-md-8 text" id="save1" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8  past text" id="save1" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=14>2 P.M.</div>
-                    <textarea class="col-md-8 text" id="save2" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save2" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=15>3 P.M.</div>
-                    <textarea class="col-md-8 text" id="save3" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save3" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=16>4 P.M.</div>
-                    <textarea class="col-md-8 text" id="save4" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save4" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
                 <div class="row">
                     <div class="hour col-md-2" value=17>5 P.M.</div>
-                    <textarea class="col-md-8 text" id="save5" placeholder="Enter"></textarea>
+                    <textarea class="col-md-8 past text" id="save5" placeholder="Enter"></textarea>
                     <button class="saveBtn col-md-2"><i class="far fa-save" style="font-size:36px;"></i></button>
                 </div>
 
@@ -116,30 +116,30 @@
                     textArea.classList.add('present');
                     textArea.classList.remove('future');
                     textArea.classList.remove('past');
-                    console.log(`currentTime = ${element}`);
+                    
 
                 } else if (timer > value) {
                     textArea.classList.remove('present');
                     textArea.classList.remove('future');
                     textArea.classList.add('past');
-                    console.log(`pastTime = ${element}`);
+                
                 } else {
                     textArea.classList.remove('present');
                     textArea.classList.add('future');
                     textArea.classList.remove('past');
-                    console.log(`futureTime = ${element}`);
+                
                 }
             }
 
         }
 
-        var collection = document.querySelectorAll(".text");
-        var saveBtns = document.querySelectorAll(".saveBtn");
+        var collection = $(".text");
+        var saveBtns = $(".saveBtn");
 
-        function eventListeners(array) {
-            console.log(array);
-            for (var i = 0; i < array.length; i++) {
-                array[i].addEventListener("click", clickSave);
+        function eventListeners() {
+            console.log(saveBtns);
+            for (var i = 0; i < saveBtns.length; i++) {
+                saveBtns[i].addEventListener("click", clickSave);
 
             }
         }
@@ -148,7 +148,7 @@
             localStorage.setItem(textArea.id, JSON.stringify(textContent));
         }
 
-
+       
         function clickSave(event) {
             event.preventDefault();
             console.log("this got logged");
@@ -163,7 +163,7 @@
 
         init();
         function init() {
-            clear();
+            // clear();
             colors(timer);
             renderSaved(collection);
             eventListeners(saveBtns);
@@ -181,11 +181,7 @@
             }
 
         }
-        function clear() {
-            if (timer > 20) {
-                localStorge.clear();
-            }
-        }
+       
 
 
     </script>
