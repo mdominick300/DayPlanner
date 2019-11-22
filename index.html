@@ -152,7 +152,8 @@
         function clickSave(event) {
             event.preventDefault();
             console.log("this got logged");
-            var target = event.target;
+            var target = this;
+            console.log('THis',this);
             var textArea = target.previousElementSibling;
             var textContent = textArea.value;
             console.log(textContent);
